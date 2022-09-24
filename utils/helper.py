@@ -1,3 +1,4 @@
+import os
 from PIL import Image
 
 # Binary to int
@@ -26,7 +27,14 @@ def generate_binary(data):
 
 
 # Load image
-def load_img():
-    resource_name = "./resources/mangekyo.jpg"
-    image = Image.open(resource_name, "r")
-    return image
+def load_img(imageName):
+    dir_name = "./resources/"
+    # resource_name = "./resources/mangekyo.jpg"
+    # image = Image.open(resource_name, "r")
+    # return image
+
+    for (root, dirs, files) in os.walk(dir_name):
+        if imageName in files:
+            img = os.path.join(root, imageName)
+            return Image.open(img, "r")
+    return None

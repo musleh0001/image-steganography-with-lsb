@@ -1,4 +1,5 @@
-# steggy
+# Image steganography with LSB algorithm(Least Significant Bit)
+
 An image steganography encoder and decoder using LSB algorithm
 
 Created in python 3.9.<br/>

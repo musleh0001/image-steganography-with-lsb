@@ -142,11 +142,12 @@ def encode(image, data):
 
     # current time and filename
     ct = datetime.datetime.now()
-    filename = secure_filename("Amaterasu " + str(ct) + ".jpg")
+    # filename = secure_filename("encoded_image " + str(ct) + ".jpg")
+    filename = secure_filename("encoded_image.jpg")
 
     # saving image
     img = Image.fromarray(test, "RGB")
-    img.save("./output/" + filename)
+    img.save("./resources/" + filename)
     # img.show()
     return [img, filename]
 
