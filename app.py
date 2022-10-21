@@ -62,6 +62,7 @@ def decode_image(img):
 def demo_main():
     img = ""
     filename = ""
+    print("--------------Welcome to Image Steganography------------------")
     print("\n--------Options--------")
     print("Option 1: Encrypt")
     print("Option 2: Decrypt")
